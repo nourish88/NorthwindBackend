@@ -58,7 +58,7 @@ namespace webAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());// buradan gelen her türlü post put falan kabul et
+            app.UseCors(builder => builder.WithOrigins("http://localhost:61270").AllowAnyHeader());// buradan gelen her türlü post put falan kabul et
             app.UseHttpsRedirection();
 
             app.UseRouting();

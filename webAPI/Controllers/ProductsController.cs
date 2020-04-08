@@ -13,7 +13,7 @@ namespace WebAPI.Controllers
         {
             _productService = productService;
         }
-       // [Authorize(Roles="Admin")]// aynen bu şekilde kullanılailir.
+        //[Authorize(Roles="Admin")]// aynen bu şekilde kullanılailir. Bu admini aratabloya yazıyoruz opeariton claims tablosuna
         [HttpGet("getall")]
         public IActionResult GetList()
         {
@@ -57,6 +57,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("update")]
+        [Authorize]
         public IActionResult Update(Product product)
         {
             var result = _productService.Update(product);

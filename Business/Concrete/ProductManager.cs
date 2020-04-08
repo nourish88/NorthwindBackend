@@ -50,7 +50,7 @@ namespace Business.Concrete
 
         public IResult Update(Product product)
         {
-           _productDal.Add(product);
+           _productDal.Update(product);
             return new SuccessResult(Messages.ProductUpdated);
         }
 
